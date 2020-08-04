@@ -43,7 +43,7 @@ class Akinator
 
             this->pAnsNode.push_back(my_vec);
             this->questions.push_back(question);
-            printf("Node with number %d sucessfully created\n", node_num);
+            printf("\033[1;35mNode\033[0m with number \033[1;35m%d\033[0m sucessfully created\n", node_num);
             this->num_nodes += 1;
             return 0;
         }
@@ -52,13 +52,13 @@ class Akinator
         {
             vector<string> answers = {""};
             vector<int> nodes = {-1};
-            printf("(A) ");
+            printf("\033[1;32m(A) \033[0m");
             return this->set_node(link, answers, nodes);
         }
 
         void run_node(int node, int * new_node)
         {
-            printf("%s \n", this->questions.at(node).c_str());
+            printf("\033[1;35m%s\033[0m \n", this->questions.at(node).c_str());
             int index = 1;
             for (auto ans : this->pAnsNode.at(node))
             {
@@ -66,7 +66,7 @@ class Akinator
                 printf("\t%d: %s\n", index, ansText.c_str());
                 index += 1;
             }
-            printf("Answer number: ");
+            printf("\033[1;35mAnswer number: \033[0m");
             int response;
             scanf("%d", &response);
             response--;
