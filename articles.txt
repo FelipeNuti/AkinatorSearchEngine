@@ -1,0 +1,17 @@
+Início: Em qual área está seu problema?
+    Assinaturas
+        Guias de Assinatura: O que você estava tentando fazer quando incorreu na dúvida?
+            Configurar assinaturas na loja
+                https://help.vtex.com/tutorial/como-configurar-assinaturas--1FA9dfE7vJqxBna9Nft5Sj
+            Aprender como funciona a Assinatura
+                https://help.vtex.com/tutorial/como-funciona-a-assinatura--frequentlyAskedQuestions_4453
+            Migrar de um produto mais antigo para a Assinatura
+                https://help.vtex.com/tutorial/como-migrar-da-recorrencia-v1-para-assinaturas-v2--3nJ4pbsRHEyKmvoN0foYRi
+    Pagamentos: Em qual dessas áreas está o seu problema?
+        Nas transações: O que você estava tentando fazer quando incorreu na dúvida?
+            Ver a data de um pagamento
+                https://help.vtex.com/tutorial/onde-vejo-a-data-de-captura-do-pagamento--7DD0JK5cbYC2UkmCYgy8I4
+            Entender como usar VTEX para nunca mais perder pagamentos
+                https://help.vtex.com/tutorial/como-funciona-a-retentativa-do-gateway-de-pagamentos--2JaHsjQIs0ceks0e2Mkwgu
+            Ver números de identificação do pagamento   
+                https://help.vtex.com/tutorial/como-achar-nsu-e-tid-do-pedido--frequentlyAskedQuestions_477
