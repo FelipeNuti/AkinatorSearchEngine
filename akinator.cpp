@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+#define DEBUG 0
+
 class Akinator
 {
     private:
@@ -28,7 +30,7 @@ class Akinator
         {
             if (answers.size() != nodes.size())
             {
-                printf("Error when setting new node");
+                if (DEBUG) printf("Error when setting new node");
                 return 1;
             }
 
@@ -43,7 +45,7 @@ class Akinator
 
             this->pAnsNode.push_back(my_vec);
             this->questions.push_back(question);
-            printf("\033[1;35mNode\033[0m with number \033[1;35m%d\033[0m sucessfully created\n", node_num);
+            if (DEBUG) printf("\033[1;35mNode\033[0m with number \033[1;35m%d\033[0m sucessfully created\n", node_num);
             this->num_nodes += 1;
             return 0;
         }
@@ -52,13 +54,13 @@ class Akinator
         {
             vector<string> answers = {""};
             vector<int> nodes = {-1};
-            printf("\033[1;32m(A) \033[0m");
+            if (DEBUG) printf("\033[1;32m(A) \033[0m");
             return this->set_node(link, answers, nodes);
         }
 
         void run_node(int node, int * new_node)
         {
-            printf("\033[1;35m%s\033[0m \n", this->questions.at(node).c_str());
+            printf("\033[1;35m\n%s\033[0m \n", this->questions.at(node).c_str());
             int index = 1;
             for (auto ans : this->pAnsNode.at(node))
             {
@@ -75,8 +77,8 @@ class Akinator
 
         int run_article(int node)
         {
-            printf("This article may have the answer to your problem: ");
-            printf("%s\n", this->questions.at(node).c_str());
+            printf("\n\033[1;35mThis article may have the answer to your problem:\n\n\033[0m");
+            printf("%s\n\n", this->questions.at(node).c_str());
             return 0;
         }
 
@@ -116,7 +118,7 @@ class Akinator
         bool handleEOG()
         {
             char yn;
-            printf("Did this article answer your query? (Y/N) ");
+            printf("\033[1;35mDid this article answer your query? (Y/N) \033[0m");
             scanf("%c", &yn);
             scanf("%c", &yn);
             if (yn == 'Y')
@@ -170,7 +172,7 @@ int main()
 {   
     ios_base::sync_with_stdio(true);
     string question = "In what area is your problem?";
-    vector<string> answers = {"Signatures", "Payments"};
+    vector<string> answers = {"Subscriptions", "Payments"};
     vector<int> nodes = {7, 8};
 
     vector<string> articles = 
@@ -190,7 +192,7 @@ int main()
     {
         "Setting up signatures in my store", 
         "Learning how signatures work", 
-        "Migrating from an older product to VTEX Signatures"
+        "Migrating from an older product to VTEX Subscriptions"
     };
 
     vector<int> nodes1 = {1, 2, 3};
